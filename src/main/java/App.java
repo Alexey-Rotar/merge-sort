@@ -34,7 +34,12 @@ public class App {
             else if (q < r)
                 temp[i] = A[q++];
         }
-        System.arraycopy(temp, 0, A, p-1, temp.length);
+
+        int t = p - 1;
+        for (int item : temp) {
+            A[t++] = item;
+        }
+        //System.arraycopy(temp, 0, A, p-1, temp.length);
     }
 
 }
